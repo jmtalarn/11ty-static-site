@@ -1,5 +1,3 @@
-const { PurgeCSS } = require("purgecss");
-
 // 11ty configuration
 module.exports = (config) => {
   config.addPassthroughCopy("src/css");
