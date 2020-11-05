@@ -5,12 +5,18 @@
     <title>{{ title }}</title>
 
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/main.css">
+
 </head>
 
 
 <body>
-    {{ content }}
+    {% include 'header.html' %}
+
+    {% if bucket %}
+    {{ bucket.content | safe  }}
+    {% endif %}
+
+    {{ content | safe }}
 </body>
 
 </html>

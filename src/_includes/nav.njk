@@ -1,0 +1,8 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+<nav>
+    {{ pagination.pages  | eleventyNavigation | length | log }}
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({activeListItemClass: "active"}) | safe }}
+    {{ pagination.pages  | eleventyNavigation | eleventyNavigationToHtml({activeListItemClass: "active"}) | safe }}
+
+</nav>
