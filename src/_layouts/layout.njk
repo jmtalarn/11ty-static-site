@@ -3,8 +3,11 @@
 
     <head>
         <title>{{ title }}</title>
-
-        <link rel="stylesheet" href="/css/reset.css">
+        {% set css %}{% include "css/reset.css" %}{% include "css/layout.css" %}{% endset %}
+        <!-- feed it through our cssmin filter to minify -->
+        <style>
+            {{css | cssmin | safe}}
+        </style>
         <script src="/js/fa.js"></script>
     </head>
 
@@ -16,6 +19,8 @@
         {% endif %}
 
         {{ content | safe }}
+
+        {% include 'footer.html' %}
     </body>
 
 </html>

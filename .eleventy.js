@@ -1,12 +1,28 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const cosmicDataNavigationItem = require("./filters/navigation/cosmicdata");
+const {
+  cssMinFilter,
+  purgeCssTransform,
+} = require("./filters/css/postprocess");
 
+console.log({ environment: process.env.ELEVENTY_ENV });
 // 11ty configuration
 module.exports = (config) => {
   config.addPlugin(eleventyNavigationPlugin);
-  config.addTemplateFormats(["css"]);
+
+  //Copy files
+  //config.addTemplateFormats(["css"]);
   // as CSS Is not a recognized template file extension it will copy it to the output.
   // config.addPassthroughCopy("src/css");
+
+  //Adding asyncNunjuckAsyncFilter because is the only one which accepts async filters
+  //https://github.com/11ty/eleventy/issues/518
+  config.addNunjucksAsyncFilter("cssmin", cssMinFilter);
+
+  //PurgeCss requires the final html so we need to run a transform
+
+  config.addTransform("purge-styles", purgeCssTransform);
+
   config.addPassthroughCopy({
     "./node_modules/@fortawesome/fontawesome-pro/js/all.min.js": "./js/fa.js",
   });

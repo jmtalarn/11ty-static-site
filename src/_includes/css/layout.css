@@ -1,0 +1,21 @@
+::placeholder {
+  color: gray;
+}
+
+body {
+  border: 3rem double darkgoldenrod;
+}
+footer {
+  border: 2rem solid salmon;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer nav {
+  display: flex;
+}
+footer nav ul {
+  display: flex;
+  list-style: none;
+}
