@@ -1,16 +1,21 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const cosmicDataNavigationItem = require("./filters/navigation/cosmicdata");
 
 // 11ty configuration
 module.exports = (config) => {
   config.addPlugin(eleventyNavigationPlugin);
-  config.addPassthroughCopy("src/css");
+  config.addTemplateFormats(["css"]);
+  // as CSS Is not a recognized template file extension it will copy it to the output.
+  // config.addPassthroughCopy("src/css");
 
+  // ADD a FILTER
   //   config.addFilter("getContent", (data, { type }) => {
   //     return data.bucket.objects
   //       .filter((bucket) => bucket.type_slug === type)
   //       .map((bucket) => bucket.content);
   //   });
 
+  config.addFilter("cosmicDataNavigationItem", cosmicDataNavigationItem);
   return {
     dir: {
       input: "src",

@@ -1,8 +1,8 @@
 ---js
 {   
-
+    tags: "cosmicdata",
     pagination: {
-        data: "cosmic.data.bucket.objects",
+        data: "cosmic.data",
         size: 1,
         alias: "bucket",
         addAllPagesToCollections: true,
@@ -15,16 +15,7 @@
                             content: bucket.content,
                             slug: bucket.slug,
                             title: bucket.title,
-                            order: bucket.order,
-                            data: {
-                                eleventyNavigation: {
-                                    key: bucket.slug,
-                                    title: bucket.title,
-                                    order: bucket.order,
-                                    url: `/${bucket.slug}/`
-                   
-                                }
-                            }
+                            order: bucket.order
                         }
                     )
                 )
