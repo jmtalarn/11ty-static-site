@@ -7,7 +7,9 @@ module.exports = (config) => {
   config.addTemplateFormats(["css"]);
   // as CSS Is not a recognized template file extension it will copy it to the output.
   // config.addPassthroughCopy("src/css");
-
+  config.addPassthroughCopy({
+    "./node_modules/@fortawesome/fontawesome-pro/js/all.min.js": "./js/fa.js",
+  });
   // ADD a FILTER
   //   config.addFilter("getContent", (data, { type }) => {
   //     return data.bucket.objects

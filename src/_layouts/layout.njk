@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>{{ title }}</title>
+    <head>
+        <title>{{ title }}</title>
 
-    <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/reset.css">
+        <script src="/js/fa.js"></script>
+    </head>
 
-</head>
+    <body>
+        {% include 'header.html' %}
 
+        {% if bucket %}
+            {{ bucket.content | safe  }}
+        {% endif %}
 
-<body>
-    {% include 'header.html' %}
-
-    {% if bucket %}
-    {{ bucket.content | safe  }}
-    {% endif %}
-
-    {{ content | safe }}
-</body>
+        {{ content | safe }}
+    </body>
 
 </html>
