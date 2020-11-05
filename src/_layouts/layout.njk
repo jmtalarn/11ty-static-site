@@ -16,6 +16,9 @@
 
         {% if bucket %}
             {{ bucket.content | safe  }}
+
+            {{ bucket.cta | ctalink | safe }}
+
         {% endif %}
 
         {{ content | safe }}
