@@ -13,16 +13,17 @@
 
     <body>
         {% include 'header.html' %}
+        <main>
+            {% if bucket %}
+                {{ bucket.content | safe  }}
 
-        {% if bucket %}
-            {{ bucket.content | safe  }}
+                {{ bucket.cta | ctalink | safe }}
 
-            {{ bucket.cta | ctalink | safe }}
+            {% endif %}
 
-        {% endif %}
+            {{ content | safe }}
 
-        {{ content | safe }}
-
+        </main>
         {% include 'footer.html' %}
     </body>
 

@@ -6,7 +6,7 @@
         
         <!-- feed it through our cssmin filter to minify -->
         <style>
-            *,::after,::before{box-sizing:border-box}*{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-font-kerning:auto;font-kerning:auto}html{font-family:sans-serif;-webkit-text-size-adjust:100%}body{margin:0}::-webkit-input-placeholder{color:gray}:-ms-input-placeholder{color:gray}::-ms-input-placeholder{color:gray}::placeholder{color:gray}body{border:3rem double #b8860b}footer{border:2rem solid salmon;position:fixed;bottom:0;left:0;right:0}footer nav{display:flex}footer nav ul{display:flex;list-style:none}
+            *,::after,::before{box-sizing:border-box}*{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-font-kerning:auto;font-kerning:auto}html{font-family:sans-serif;-webkit-text-size-adjust:100%}body{margin:0}body{display:grid;grid-template-areas:"header" "main" "footer";grid-template-rows:auto 1fr auto;grid-template-columns:1fr;height:100vh}main{padding:1rem;overflow:auto}footer nav{display:flex}footer nav ul{display:flex;list-style:none}
         </style>
         <script src="/js/fa.js"></script>
     </head>
@@ -14,19 +14,19 @@
     <body>
         <header>
     <h1>Hi, this is the header</h1>
-
 </header>
 
+        <main>
+            
 
-        
-
-        <h1>11ty starter site</h1>
+            <h1>11ty starter site</h1>
 <p><i class="fab fa-aviato fa-5x"></i></p>
 <h2>subtitle</h2>
 <p>This is a demonstration website using the <a href="https://www.11ty.dev/">11ty static site generator</a>. It shows pages, blog posts, lists, and tags.</p>
 <p>The whole build process is managed through 11ty.</p>
 
 
+        </main>
         <footer>
     
 

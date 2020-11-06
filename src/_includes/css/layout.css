@@ -1,17 +1,20 @@
-::placeholder {
-  color: gray;
+body {
+  display: grid;
+
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  height: 100vh;
 }
 
-body {
-  border: 3rem double darkgoldenrod;
+main {
+  padding: 1rem;
+  overflow: auto;
 }
-footer {
-  border: 2rem solid salmon;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+
 footer nav {
   display: flex;
 }
