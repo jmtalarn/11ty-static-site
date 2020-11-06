@@ -17,8 +17,15 @@ main {
 
 footer nav {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 footer nav ul {
   display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
   list-style: none;
+  margin: 1rem 0;
+  padding: 0;
 }

@@ -1,6 +1,8 @@
 {% set navPages = collections.all | eleventyNavigation %}
 
 <nav>
-    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({activeListItemClass: "active"}) | safe }}
-    {{ collections.cosmicdata   | cosmicDataNavigationItem  | eleventyNavigationToHtml({activeListItemClass: "active"}) | safe }}
+    <ul>
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtmlCustom({activeListItemClass: "active"}) | safe }}
+        {{ collections.cosmicdata   | cosmicDataNavigationItem  | eleventyNavigationToHtmlCustom({activeListItemClass: "active",listElement: "" }) | safe }}
+    </ul>
 </nav>

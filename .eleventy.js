@@ -1,6 +1,7 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const cosmicDataNavigationItem = require("./filters/navigation/cosmicdata");
 const ctaLink = require("./filters/navigation/cta-link");
+const navigationToHtmlCustom = require("./filters/navigation/navigation-to-html-custom");
 
 const {
   cssMinFilter,
@@ -25,7 +26,8 @@ module.exports = (config) => {
 
   config.addTransform("purge-styles", purgeCssTransform);
 
-  config.addFilter("ctalink", ctaLink);
+  config.addFilter("ctaLink", ctaLink);
+  config.addFilter("eleventyNavigationToHtmlCustom", navigationToHtmlCustom);
 
   config.addPassthroughCopy({
     "./node_modules/@fortawesome/fontawesome-pro/js/all.min.js": "./js/fa.js",

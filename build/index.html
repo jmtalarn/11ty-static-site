@@ -6,7 +6,7 @@
         
         <!-- feed it through our cssmin filter to minify -->
         <style>
-            *,::after,::before{box-sizing:border-box}*{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-font-kerning:auto;font-kerning:auto}html{font-family:sans-serif;-webkit-text-size-adjust:100%}body{margin:0}body{display:grid;grid-template-areas:"header" "main" "footer";grid-template-rows:auto 1fr auto;grid-template-columns:1fr;height:100vh}main{padding:1rem;overflow:auto}footer nav{display:flex}footer nav ul{display:flex;list-style:none}
+            *,::after,::before{box-sizing:border-box}*{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-font-kerning:auto;font-kerning:auto}html{font-family:sans-serif;-webkit-text-size-adjust:100%}body{margin:0}body{display:grid;grid-template-areas:"header" "main" "footer";grid-template-rows:auto 1fr auto;grid-template-columns:1fr;height:100vh}main{padding:1rem;overflow:auto}footer nav{display:flex;align-items:center;justify-content:space-evenly}footer nav ul{display:flex;width:100%;align-items:center;justify-content:space-evenly;list-style:none;margin:1rem 0;padding:0}
         </style>
         <script src="/js/fa.js"></script>
     </head>
@@ -31,14 +31,16 @@
     
 
 <nav>
-    <ul><li><a href="/">index</a></li>
+    <ul>
+        <li><a href="/">index</a></li>
 <li><a href="/page1/">Page 1</a></li>
-<li><a href="/page2/">Page 2</a></li></ul>
-    <ul><li><a href="/site">jmtalarn.com</a></li>
+<li><a href="/page2/">Page 2</a></li>
+        <li><a href="/site">jmtalarn.com</a></li>
 <li><a href="/cv">Cv</a></li>
 <li><a href="/blog">Blog</a></li>
 <li><a href="/game">Game</a></li>
-<li><a href="/contact">Contact</a></li></ul>
+<li><a href="/contact">Contact</a></li>
+    </ul>
 </nav>
 
 </footer>
