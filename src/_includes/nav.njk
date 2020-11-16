@@ -4,5 +4,11 @@
     <ul>
         {{ collections.all | eleventyNavigation | eleventyNavigationToHtmlCustom({activeListItemClass: "active"}) | safe }}
         {{ collections.cosmicdata   | cosmicDataNavigationItem  | eleventyNavigationToHtmlCustom({activeListItemClass: "active",listElement: "" }) | safe }}
+        <li>
+            <a href="">rss</a>
+        </li>
+        <li>
+            <a href="/sitemap.xml">sitemap.xml</a>
+        </li>
     </ul>
 </nav>

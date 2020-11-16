@@ -2,6 +2,8 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const cosmicDataNavigationItem = require("./filters/navigation/cosmicdata");
 const ctaLink = require("./filters/navigation/cta-link");
 const navigationToHtmlCustom = require("./filters/navigation/navigation-to-html-custom");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+const xmlFiltersPlugin = require("eleventy-xml-plugin");
 
 const {
   cssMinFilter,
@@ -12,7 +14,8 @@ console.log({ environment: process.env.ELEVENTY_ENV });
 // 11ty configuration
 module.exports = (config) => {
   config.addPlugin(eleventyNavigationPlugin);
-
+  config.addPlugin(pluginRss);
+  config.addPlugin(xmlFiltersPlugin);
   //Copy files
   //config.addTemplateFormats(["css"]);
   // as CSS Is not a recognized template file extension it will copy it to the output.
